@@ -18,6 +18,8 @@ Route::get('/', function () {
 
 //This will make all routes (FOR,CONROLLER)
 Route::resource('projects', 'ProjectsController');
+Route::patch('/tasks/{task}', 'ProjectTaskController@update');
+Route::post('/projects/{project}/tasks', 'ProjectTaskController@store');
 
 // Route::get('/projects', 'ProjectsController@index');
 // Route::get('/projects/create', 'ProjectsController@create');
